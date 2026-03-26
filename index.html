@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shams Magdy — ML Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="logo">SM<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#training">Training & Activities</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certs">Certificates</a></li>
+    <li><a href="#freelance">Freelance</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-hire">Hire Me</a>
+  <button class="mob-btn" onclick="toggleNav()">☰</button>
+</nav>
+
+<!-- Mobile Nav -->
+<div id="mobNav" style="display:none;position:fixed;inset:0;background:var(--bg2);z-index:199;padding:5rem 2rem;flex-direction:column;gap:1.4rem;overflow-y:auto">
+  <button onclick="toggleNav()" style="position:absolute;top:1.2rem;right:1.5rem;background:none;border:none;font-size:1.5rem;color:var(--text);cursor:pointer">✕</button>
+  <a onclick="toggleNav()" href="#about" style="font-family:'Playfair Display', serif;font-size:1.8rem;font-weight:700;color:var(--text);text-decoration:none">About</a>
+  <a onclick="toggleNav()" href="#education" style="font-family:'Playfair Display', serif;font-size:1.8rem;font-weight:700;color:var(--text);text-decoration:none">Education</a>
+  <a onclick="toggleNav()" href="#experience" style="font-family:'Playfair Display', serif;font-size:1.8rem;font-weight:700;color:var(--text);text-decoration:none">Experience</a>
+  <a onclick="toggleNav()" href="#training" style="font-family:'Playfair Display', serif;font-size:1.8rem;font-weight:700;color:var(--text);text-decoration:none">Training</a>
+  <a onclick="toggleNav()" href="#services" style="font-family:'Playfair Display', serif;font-size:1.8rem;font-weight:700;color:var(--text);text-decoration:none">Services</a>
+  <a onclick="toggleNav()" href="#projects" style="font-family:'Playfair Display', serif;font-size:1.8rem;font-weight:700;color:var(--text);text-decoration:none">Projects</a>
+  <a onclick="toggleNav()" href="#certs" style="font-family:'Playfair Display', serif;font-size:1.8rem;font-weight:700;color:var(--text);text-decoration:none">Certificates</a>
+  <a onclick="toggleNav()" href="#freelance" style="font-family:'Playfair Display', serif;font-size:1.8rem;font-weight:700;color:var(--text);text-decoration:none">Freelance</a>
+  <a onclick="toggleNav()" href="#contact" style="font-family:'Playfair Display', serif;font-size:1.8rem;font-weight:700;color:var(--text);text-decoration:none">Contact</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow au d1">✦ Open to Opportunities · Cairo, Egypt</div>
+    <h1 class="hero-name au d2">Shams<br><em>Magdy</em></h1>
+    <div class="hero-role au d3">Machine Learning Engineer</div>
+    <p class="hero-bio au d4">Building <strong>intelligent systems</strong> that transform raw data into real-world impact. Specialized in end-to-end ML pipelines, deep learning architectures, and <strong>mobile app development</strong>. 30+ projects. Detail-obsessed.</p>
+    <div class="hero-btns au d5">
+      <a href="#projects" class="btn-v">View Projects →</a>
+      <a href="https://drive.google.com/file/d/1Xx9rnxkoZKxZVt7LdDvthrAMsBUl-Bbk/view?usp=sharing" class="btn-o">Download CV</a>
+    </div>
+    <div class="hero-chips au d5">
+      <span class="chip" style="color:var(--violet);border-color:rgba(124,58,255,.3);background:rgba(124,58,255,.07)">Deep Learning</span>
+      <span class="chip" style="color:var(--coral);border-color:rgba(255,92,58,.3);background:rgba(255,92,58,.07)">Computer Vision</span>
+      <span class="chip" style="color:var(--mint);border-color:rgba(0,200,150,.3);background:rgba(0,200,150,.07)">NLP</span>
+      <span class="chip" style="color:var(--amber);border-color:rgba(255,176,32,.3);background:rgba(255,176,32,.07)">Flutter</span>
+    </div>
+    <div class="hero-stats au d6">
+      <div><div class="s-num">30<span>+</span></div><div class="s-lbl">ML Projects</div></div>
+      <div><div class="s-num">99<span>%</span></div><div class="s-lbl">Top Accuracy</div></div>
+      <div><div class="s-num">2<span>+</span></div><div class="s-lbl">Years in AI</div></div>
+    </div>
+  </div>
+
+  <!-- HERO RIGHT — Photo -->
+  <div class="hero-right" >
+    <div class="hero-photo-ring au d3">
+      <div class="illo-ring ir1"></div>
+      <div class="illo-ring ir2"></div>
+      <div class="illo-ring ir3"></div>
+      <!-- Photo circle — replace src with your photo path -->
+      <div class="photo-circle" id="heroPhotoCircle">
+        <div class="photo-placeholder" id="heroPlaceholder" style="display: none;">SM</div>
+        <img id="heroPhotoImg" src="images\pro22.jpg" alt="Shams Magdy" style="display: block;"> <!--! add photo path -->
+      </div> 
+      <!-- <div class="photo-upload-hint" id="photoHint" style="display: none;">📷 Click to add your photo</div> -->
+      <div class="illo-dot id1">🧠</div>
+      <div class="illo-dot id2">📊</div>
+      <div class="illo-dot id3">⚡</div>
+      <div class="illo-dot id4">📱</div>
+      <div class="fbadge">✅ Available <span>· Now</span></div>
+    </div>
+  </div>
+  
+  
+</section>
+<div class="divider"></div>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+<div class="container">
+  <div class="rev in">
+    <div class="sec-label" style="color:var(--coral)"><span style="display:inline-block;width:18px;height:2px;background:var(--coral)"></span>About Me</div>
+    <h2 class="sec-h">Precision, curiosity,<br><em style="color:var(--coral)">and clear thinking</em></h2>
+  </div>
+  <div class="about-grid">
+    <div class="rev in">
+      <p class="about-p">I'm a <strong>Machine Learning Engineer</strong> based in Cairo, Egypt — completing my Bachelor's in Computer Science at Benha University with a deep focus on Artificial Intelligence and Data Science.</p>
+      <p class="about-p">My philosophy: I don't consider work done until the results are <strong>fully understood, well-documented, and genuinely useful</strong>. High accuracy is expected — clear, actionable insights are what I deliver.</p>
+      <p class="about-p">I'm passionate about <strong>bridging AI research with real-world products</strong> — through both ML model development and mobile application development using Flutter.</p>
+      <div class="about-hl"><p>"If it doesn't click in my head, it's not done."</p></div>
+      <p class="about-p">Currently a <strong>Machine Learning Trainee at DEPI</strong> and active freelancer across multiple platforms.</p>
+      <div style="margin-top:1.2rem">
+        <span class="a-tag">Python</span><span class="a-tag">TensorFlow</span><span class="a-tag">PyTorch</span>
+        <span class="a-tag">Scikit-learn</span><span class="a-tag">Flutter</span><span class="a-tag">Keras</span>
+        <span class="a-tag">EDA</span><span class="a-tag">Transfer Learning</span><span class="a-tag">NLP</span>
+      </div>
+    </div>
+    <div class="rev in" style="display:flex;flex-direction:column;gap:1rem">
+      <div style="background:linear-gradient(135deg,#ede9ff,#fce4ec);border-radius:18px;padding:1.8rem">
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin-bottom:1rem">// Core Stack</div>
+        <div>
+          <span class="a-tag" style="background:#fff;border-color:rgba(124,58,255,.22);color:var(--violet)">Python</span>
+          <span class="a-tag" style="background:#fff;border-color:rgba(124,58,255,.22);color:var(--violet)">TensorFlow</span>
+          <span class="a-tag" style="background:#fff;border-color:rgba(124,58,255,.22);color:var(--violet)">PyTorch</span>
+          <span class="a-tag" style="background:#fff;border-color:rgba(124,58,255,.22);color:var(--violet)">Keras</span>
+          <span class="a-tag" style="background:#fff;border-color:rgba(124,58,255,.22);color:var(--violet)">Flutter</span>
+          <span class="a-tag" style="background:#fff;border-color:rgba(124,58,255,.22);color:var(--violet)">Scikit-learn</span>
+        </div>
+      </div>
+      <div class="stats-mini">
+        <div class="stat-mini-c"><div class="stat-mini-n" style="color:var(--violet)">30<span style="font-size:1.1rem">+</span></div><div class="stat-mini-l">Projects</div></div>
+        <div class="stat-mini-c"><div class="stat-mini-n" style="color:var(--coral)">99<span style="font-size:1.1rem">%</span></div><div class="stat-mini-l">Top Accuracy</div></div>
+        <div class="stat-mini-c"><div class="stat-mini-n" style="color:var(--mint)">2<span style="font-size:1.1rem">+</span></div><div class="stat-mini-l">Years in AI</div></div>
+        <div class="stat-mini-c"><div class="stat-mini-n" style="color:var(--amber)">4</div><div class="stat-mini-l">Platforms</div></div>
+      </div>
+      <div style="background:linear-gradient(135deg,#e0f7f0,#e0f0ff);border-radius:14px;padding:1.2rem;display:flex;align-items:center;gap:.9rem">
+        <span style="font-size:1.4rem">🌍</span>
+        <div><div style="font-size:.72rem;font-weight:700;color:var(--text)">Languages</div><div style="font-size:.7rem;color:var(--muted);margin-top:.2rem">English B2 · German A2 · Spanish A1</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══ EDUCATION ═══ -->
+<section id="education">
+<div class="container">
+  <div class="rev in">
+    <div class="sec-label" style="color:var(--sky)"><span style="display:inline-block;width:18px;height:2px;background:var(--sky)"></span>Education</div>
+    <h2 class="sec-h">Academic<br><em style="color:var(--sky)">Background</em></h2>
+    <p class="sec-sub" style="margin-top:.5rem">Solid academic foundation in Computer Science and Artificial Intelligence at one of Egypt's leading engineering faculties.</p>
+  </div>
+  <div style="margin-top:2.5rem">
+    <div class="edu-card rev in">
+      <div class="edu-card-bar" style="background:linear-gradient(180deg,var(--violet),var(--sky))"></div>
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1.5rem;flex-wrap:wrap">
+        <div>
+          <div class="edu-deg">B.Sc. in Computer Science &amp; Artificial Intelligence</div>
+          <div class="edu-org">🎓 Faculty of Computers and Artificial Intelligence · Benha University</div>
+        </div>
+        <span class="edu-yr-badge" style="color:var(--violet);border-color:rgba(124,58,255,.3);background:rgba(124,58,255,.07)">Sep 2022 – Sep 2026</span>
+      </div>
+      <p class="edu-desc">Studying Computer Science with a deep concentration in Artificial Intelligence and Data Science. Coursework covers machine learning, deep learning, data preprocessing, algorithm design, software engineering, and model development. Hands-on projects using Python, TensorFlow, and Scikit-learn.</p>
+      <div class="edu_cards">
+        <div class="cc1" style="background:rgba(124,58,255,.05);border:1.5px solid rgba(124,58,255,.14);border-radius:10px;padding:.9rem;text-align:center">
+          <div style="font-size:1.3rem;margin-bottom:.25rem">🤖</div>
+          <div style="font-size:.7rem;font-weight:700;color:var(--text)">Artificial Intelligence</div>
+          <div style="font-size:.62rem;color:var(--muted);margin-top:.15rem">Core specialization</div>
+        </div>
+        <div class="cc2" style="background:rgba(14,165,233,.05);border:1.5px solid rgba(14,165,233,.14);border-radius:10px;padding:.9rem;text-align:center">
+          <div style="font-size:1.3rem;margin-bottom:.25rem">📊</div>
+          <div style="font-size:.7rem;font-weight:700;color:var(--text)">Data Science</div>
+          <div style="font-size:.62rem;color:var(--muted);margin-top:.15rem">Analysis &amp; visualization</div>
+        </div>
+        <div class="cc3" style="background:rgba(0,200,150,.05);border:1.5px solid rgba(0,200,150,.14);border-radius:10px;padding:.9rem;text-align:center">
+          <div style="font-size:1.3rem;margin-bottom:.25rem">💻</div>
+          <div style="font-size:.7rem;font-weight:700;color:var(--text)">Software Engineering</div>
+          <div style="font-size:.62rem;color:var(--muted);margin-top:.15rem">Systems &amp; algorithms</div>
+        </div>
+      </div>
+      <div style="margin-top:1.1rem">
+        <span class="edu-skill">Machine Learning</span><span class="edu-skill">Deep Learning</span>
+        <span class="edu-skill">Data Structures</span><span class="edu-skill">Algorithms</span>
+        <span class="edu-skill">Python</span><span class="edu-skill">Data Science</span>
+        <span class="edu-skill">OOP</span><span class="edu-skill">Databases</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section id="experience">
+<div class="container">
+  <div class="rev in">
+    <div class="sec-label" style="color:var(--coral)"><span style="display:inline-block;width:18px;height:2px;background:var(--coral)"></span>Experience</div>
+    <h2 class="sec-h">Where I've<br><em style="color:var(--coral)">made an impact</em></h2>
+  </div>
+  <div class="exp-timeline">
+    <div class="exp-row rev in">
+      <div class="exp-left">
+        <div class="exp-period" style="color:var(--coral)">Aug – Oct 2025</div>
+        <div class="exp-co">X-Clan</div>
+      </div>
+      <div class="exp-right">
+        <div class="exp-pill" style="color:var(--coral);border-color:rgba(255,92,58,.3);background:rgba(255,92,58,.07)">Internship</div>
+        <div class="exp-role">Machine Learning Intern</div>
+        <p class="exp-desc">Built a production-grade recommendation system connecting patients with the most suitable, available, and nearest nurse. Multi-factor ML scoring integrating specialization compatibility, availability, and location proximity — delivered as a live product.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══ TRAINING & ACTIVITIES ═══ -->
+<section id="training">
+<div class="container">
+  <div class="rev in">
+    <div class="sec-label" style="color:var(--mint)"><span style="display:inline-block;width:18px;height:2px;background:var(--mint)"></span>Training &amp; Activities</div>
+    <h2 class="sec-h">Programs &amp;<br><em style="color:var(--mint)">Community Work</em></h2>
+  </div>
+  <div class="training-grid">
+
+    <div class="tr-card rev in c1">
+      <div class="tr-card-bar" style="background:linear-gradient(90deg,var(--mint),var(--sky))"></div>
+      <div class="tr-pill" style="color:var(--mint);border-color:rgba(0,200,150,.3);background:rgba(0,200,150,.07)"><span style="width:6px;height:6px;border-radius:50%;background:var(--mint);display:inline-block"></span> Currently Active</div>
+      <div class="tr-icon">🏛️</div>
+      <div class="tr-title">Machine Learning Trainee — DEPI</div>
+      <div class="tr-org">Digital Egypt Pioneers Initiative · MCIT · Nov 2025 – Present</div>
+      <p class="tr-desc">National AI program under the Ministry of Communications. Training in Deep Learning, Computer Vision, and NLP. Applied knowledge to improve an industrial ML model from 88% → 95% accuracy.</p>
+      <div class="tr-tags">
+        <span class="tr-tag" style="color:var(--mint);border-color:rgba(0,200,150,.3);background:rgba(0,200,150,.06)">Deep Learning</span>
+        <span class="tr-tag" style="color:var(--mint);border-color:rgba(0,200,150,.3);background:rgba(0,200,150,.06)">Computer Vision</span>
+        <span class="tr-tag" style="color:var(--mint);border-color:rgba(0,200,150,.3);background:rgba(0,200,150,.06)">NLP</span>
+      </div>
+    </div>
+
+    <div class="tr-card rev in c2">
+      <div class="tr-card-bar" style="background:linear-gradient(90deg,var(--amber),var(--coral))"></div>
+      <div class="tr-pill" style="color:var(--amber);border-color:rgba(255,176,32,.3);background:rgba(255,176,32,.07)">Program · 45 hrs</div>
+      <div class="tr-icon">🚀</div>
+      <div class="tr-title">InnovEgypt Entrepreneurship Training</div>
+      <div class="tr-org">TIEC · ITIDA · Ministry of Communications &amp; IT · July 2024</div>
+      <p class="tr-desc">Intensive 45-hour entrepreneurship bootcamp. Built a final product for a potential startup — earned Certificate of Acknowledgement from ITIDA.</p>
+      <div class="tr-tags">
+        <span class="tr-tag" style="color:var(--amber);border-color:rgba(255,176,32,.3);background:rgba(255,176,32,.06)">Entrepreneurship</span>
+        <span class="tr-tag" style="color:var(--amber);border-color:rgba(255,176,32,.3);background:rgba(255,176,32,.06)">Product Dev</span>
+      </div>
+    </div>
+
+    <div class="tr-card rev in c3 c3-grid">
+
+      <div  class="g1">
+        <div class="tr-card-bar" style="background:linear-gradient(90deg,var(--sky),var(--violet))"></div>
+        <div class="tr-pill" style="color:var(--sky);border-color:rgba(14,165,233,.3);background:rgba(14,165,233,.07)">Volunteer</div>
+        <div class="tr-icon">🎤</div>
+        <div class="tr-title">ML Moderator — STP Student Activity</div>
+        <div class="tr-org">STP Student Activity · Benha University · 2024</div>
+        <p class="tr-desc">Explained ML fundamentals, led technical workshop sessions, and supported students in applying ML to real projects. Focus on building intuition, not just running code.</p>
+        <div class="tr-tags">
+          <span class="tr-tag" style="color:var(--sky);border-color:rgba(14,165,233,.3);background:rgba(14,165,233,.06)">ML Teaching</span>
+          <span class="tr-tag" style="color:var(--sky);border-color:rgba(14,165,233,.3);background:rgba(14,165,233,.06)">Mentorship</span>
+        </div>
+      </div>.
+
+      <div class="g2">
+        <div class="stp-photos rev in">
+          <div class="stp-photos-label">STP Activity Photos</div>
+          <div class="stp-photos-grid">
+            
+            <div class="stp-photo-slot" onclick="triggerUpload(this)" style="border-style: solid; border-color: var(--sky);">
+              <img alt="STP Photo 1" src="images\stp1.jpg" style="display: block;"> <!--! (src="add yourphoto")-->
+              <div class="slot-icon" style="display: none;">📷</div>
+            </div>
+
+            <div class="stp-photo-slot" onclick="triggerUpload(this)" style="border-style: solid; border-color: var(--sky);">
+              <img alt="STP Photo 2" src="images\stp3.png" style="display: block;"> <!--! (src="add yourphoto")-->
+              <div class="slot-icon" style="display: none;">📷</div>
+            </div>
+
+            <div class="stp-photo-slot" onclick="triggerUpload(this)" style="border-style: solid; border-color: var(--sky);">
+              <img alt="STP Photo 3" src="images\stp2.png" style="display: block;"> <!--! (src="add yourphoto")-->
+              <div class="slot-icon" style="display: none;">📷</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services">
+<div class="container">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:3.5rem" class="rev in">
+    <div>
+      <div class="sec-label" style="color:var(--violet)"><span style="display:inline-block;width:18px;height:2px;background:var(--violet)"></span>What I Do</div>
+      <h2 class="sec-h">Services &amp;<br><em style="color:var(--violet)">Capabilities</em></h2>
+    </div>
+    <p class="sec-sub">From raw data to production-ready models and polished mobile apps — I deliver with clarity, precision, and real results.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card rev in">
+      <div class="svc-icon" style="background:#ede9ff">🤖</div>
+      <div class="svc-title">ML Model Development</div>
+      <p class="svc-desc">End-to-end ML pipelines — data cleaning, feature engineering, training, tuning, and evaluation. Classification, regression, clustering, and recommendation systems.</p>
+      <div class="svc-tags"><span class="stag">Scikit-learn</span><span class="stag">XGBoost</span><span class="stag">Python</span><span class="stag">Pandas</span></div>
+    </div>
+    <div class="svc-card rev in">
+      <div class="svc-icon" style="background:#fff0f8">🧠</div>
+      <div class="svc-title">Deep Learning &amp; CV</div>
+      <p class="svc-desc">Building and fine-tuning deep neural networks for image classification and object detection. Expertise in transfer learning with CNN, ResNet, MobileNet architectures.</p>
+      <div class="svc-tags"><span class="stag">TensorFlow</span><span class="stag">PyTorch</span><span class="stag">CNN</span><span class="stag">ResNet</span></div>
+    </div>
+    <div class="svc-card rev in">
+      <div class="svc-icon" style="background:#e0f7f0">💬</div>
+      <div class="svc-title">NLP &amp; Text Intelligence</div>
+      <p class="svc-desc">Text classification, sentiment analysis, and language modeling. Trained in advanced NLP through DEPI with deep hands-on project experience.</p>
+      <div class="svc-tags"><span class="stag">NLP</span><span class="stag">NLTK</span><span class="stag">Transformers</span><span class="stag">Python</span></div>
+    </div>
+    <div class="svc-card rev in">
+      <div class="svc-icon" style="background:#fff0eb">🔬</div>
+      <div class="svc-title">Model Optimization</div>
+      <p class="svc-desc">Diagnosing and improving underperforming models through preprocessing, hyperparameter tuning, and regularization — proven to push accuracy from 88% to 95%.</p>
+      <div class="svc-tags"><span class="stag">Hyperparameter Tuning</span><span class="stag">Keras</span><span class="stag">Cross-Validation</span></div>
+    </div>
+    <div class="svc-card rev in">
+      <div class="svc-icon" style="background:#e0f0ff">📱</div>
+      <div class="svc-title">Flutter App Development</div>
+      <p class="svc-desc">Building clean, responsive mobile applications with Flutter and Dart. From UI design to full app functionality — smooth, well-structured, and production-ready.</p>
+      <div class="svc-tags"><span class="stag">Flutter</span><span class="stag">Dart</span><span class="stag">Mobile UI</span><span class="stag">Android</span></div>
+    </div>
+    <div class="svc-card rev in">
+      <div class="svc-icon" style="background:#fff8e0">📊</div>
+      <div class="svc-title">EDA &amp; Data Reporting</div>
+      <p class="svc-desc">Deep exploratory analysis to surface hidden patterns and actionable insights. Professional visualizations and clear data storytelling for technical and non-technical audiences.</p>
+      <div class="svc-tags"><span class="stag">Pandas</span><span class="stag">Matplotlib</span><span class="stag">Seaborn</span><span class="stag">NumPy</span></div>
+    </div>
+  </div>
+</div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══ PROJECTS ═══ -->
+<section id="projects">
+<div class="container">
+  <div class="rev in">
+    <div class="sec-label" style="color:var(--pink)"><span style="display:inline-block;width:18px;height:2px;background:var(--pink)"></span>Selected Work</div>
+    <h2 class="sec-h">Projects that<br><em style="color:var(--pink)">prove the point</em></h2>
+  </div>
+  <div class="proj-grid">
+
+    <!-- P1 Tomato LEAF - wide -->
+    <div class="proj-card wide rev in">
+      <div class="proj-vis" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9)">
+        <svg viewBox="0 0 560 220" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="55" x2="560" y2="55" stroke="rgba(0,0,0,.04)" stroke-width="1"></line>
+          <line x1="0" y1="110" x2="560" y2="110" stroke="rgba(0,0,0,.04)" stroke-width="1"></line>
+          <line x1="0" y1="165" x2="560" y2="165" stroke="rgba(0,0,0,.04)" stroke-width="1"></line>
+          <line x1="140" y1="0" x2="140" y2="220" stroke="rgba(0,0,0,.04)" stroke-width="1"></line>
+          <line x1="280" y1="0" x2="280" y2="220" stroke="rgba(0,0,0,.04)" stroke-width="1"></line>
+          <line x1="420" y1="0" x2="420" y2="220" stroke="rgba(0,0,0,.04)" stroke-width="1"></line>
+          <path d="M276 165 Q278 185 280 205" stroke="#5d4037" stroke-width="3" fill="none" stroke-linecap="round"></path>
+          <path d="M276 165 Q240 160 210 145 Q175 128 158 108 Q142 88 148 68 Q154 50 172 44 Q192 38 212 46 Q232 54 248 68 Q258 78 264 92 Q268 78 278 62 Q292 44 314 38 Q336 32 352 44 Q368 56 368 76 Q368 98 352 116 Q334 136 308 150 Q292 160 276 165Z" fill="#4caf50" opacity="0.82"></path>
+          <path d="M276 165 Q258 158 240 148 Q210 132 196 112 Q185 96 188 78 Q192 62 206 54 Q222 46 238 52 Q252 58 262 72 Q268 80 270 92 Q272 80 278 66 Q290 48 308 42 Q324 38 338 48 Q350 58 348 76 Q346 96 330 114 Q314 132 294 148 Q286 154 276 165Z" fill="#66bb6a" opacity="0.45"></path>
+          <path d="M276 163 Q270 130 262 105 Q255 82 248 65" stroke="#388e3c" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.6"></path>
+          <path d="M276 163 Q282 130 290 106 Q298 82 306 62" stroke="#388e3c" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.6"></path>
+          <path d="M263 118 Q240 114 220 108" stroke="#388e3c" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.45"></path>
+          <path d="M258 100 Q238 94 218 88" stroke="#388e3c" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.45"></path>
+          <path d="M290 118 Q312 114 330 108" stroke="#388e3c" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.45"></path>
+          <path d="M295 100 Q316 94 334 88" stroke="#388e3c" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.45"></path>
+          <ellipse cx="218" cy="95" rx="16" ry="13" fill="#795548" opacity="0.85"></ellipse>
+          <ellipse cx="218" cy="95" rx="10" ry="8" fill="#a1887f" opacity="0.7"></ellipse>
+          <ellipse cx="218" cy="95" rx="5" ry="4" fill="#4e342e" opacity="0.8"></ellipse>
+          <ellipse cx="218" cy="95" rx="16" ry="13" fill="none" stroke="#ffc107" stroke-width="1.2" opacity="0.55"></ellipse>
+          <path d="M300 88 Q314 82 322 90 Q328 98 320 106 Q310 112 300 106 Q292 100 300 88Z" fill="#546e2a" opacity="0.8"></path>
+          <circle cx="245" cy="128" r="10" fill="#8d6e63" opacity="0.8"></circle>
+          <circle cx="245" cy="128" r="6" fill="#bcaaa4" opacity="0.65"></circle>
+          <circle cx="245" cy="128" r="3" fill="#fff8e1" opacity="0.7"></circle>
+          <ellipse cx="322" cy="120" rx="12" ry="10" fill="#6d4c41" opacity="0.8"></ellipse>
+          <ellipse cx="322" cy="120" rx="7" ry="6" fill="#a1887f" opacity="0.6"></ellipse>
+          <ellipse cx="322" cy="120" rx="12" ry="10" fill="none" stroke="#ffca28" stroke-width="1" opacity="0.5"></ellipse>
+          <rect x="198" y="78" width="40" height="34" rx="3" fill="none" stroke="#4caf50" stroke-width="2"></rect>
+          <rect x="198" y="65" width="68" height="14" rx="3" fill="rgba(76,175,80,.2)"></rect>
+          <text x="232" y="75" text-anchor="middle" fill="#1b5e20" font-size="8.5" font-family="monospace" font-weight="700">Early Blight 96%</text>
+          <rect x="288" y="76" width="46" height="38" rx="3" fill="none" stroke="#ff9800" stroke-width="2"></rect>
+          <rect x="288" y="63" width="62" height="14" rx="3" fill="rgba(255,152,0,.18)"></rect>
+          <text x="319" y="73" text-anchor="middle" fill="#e65100" font-size="8.5" font-family="monospace" font-weight="700">Late Blight 91%</text>
+          <rect x="231" y="115" width="28" height="26" rx="3" fill="none" stroke="#2196f3" stroke-width="1.8"></rect>
+          <rect x="231" y="102" width="60" height="13" rx="3" fill="rgba(33,150,243,.15)"></rect>
+          <text x="261" y="112" text-anchor="middle" fill="#0d47a1" font-size="8" font-family="monospace" font-weight="700">Septoria 88%</text>
+          <rect x="8" y="195" width="310" height="18" rx="4" fill="rgba(255,255,255,.6)"></rect>
+          <text x="16" y="207" fill="rgba(0,100,0,.65)" font-size="8.5" font-family="monospace">CNN + MobileNet + ResNet · Transfer Learning · Acc: 90%+</text>
+          <rect x="8" y="8" width="196" height="18" rx="4" fill="rgba(255,255,255,.55)"></rect>
+          <text x="16" y="20" fill="rgba(0,80,0,.7)" font-size="8.5" font-family="monospace" font-weight="700">TOMATO LEAF DISEASE DETECTOR</text>
+        </svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-num" style="color:var(--mint)">01 · Computer Vision</div>
+        <div class="proj-title">Tomato Leaf Disease Classifier</div>
+        <p class="proj-desc">Multi-architecture deep learning system to detect tomato leaf diseases using CNN, MobileNet, and ResNet with transfer learning. Full pipeline from raw leaf images to disease classification output.</p>
+        <div class="proj-result" style="background:#e8f5e9;color:#2e7d32">🎯 90%+ accuracy · Early Blight, Late Blight, Septoria detection</div>
+        <div class="proj-techs"><span class="pt">TensorFlow</span><span class="pt">CNN</span><span class="pt">MobileNet</span><span class="pt">ResNet</span><span class="pt">Transfer Learning</span></div>
+      </div>
+      <div class="proj-foot"><span>Deep Learning · CV</span><a href="https://www.kaggle.com/code/shamsmagdy12/tomato-leaf-disease-classifier" class="pl" style="color:var(--mint)">Kaggle ↗</a></div>
+    </div>
+
+    <!-- P2 Churn -->
+    <div class="proj-card rev in">
+      <div class="proj-vis" style="background:linear-gradient(135deg,#ede9ff,#e0d8ff)">
+        <svg viewBox="0 0 280 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <line x1="30" y1="170" x2="260" y2="170" stroke="rgba(124,58,255,.2)" stroke-width="1"></line>
+          <line x1="30" y1="20" x2="30" y2="170" stroke="rgba(124,58,255,.2)" stroke-width="1"></line>
+          <rect x="55" y="70" width="28" height="100" rx="3" fill="rgba(124,58,255,.2)"></rect>
+          <rect x="88" y="45" width="28" height="125" rx="3" fill="rgba(124,58,255,.75)"></rect>
+          <rect x="130" y="90" width="28" height="80" rx="3" fill="rgba(124,58,255,.2)"></rect>
+          <rect x="163" y="55" width="28" height="115" rx="3" fill="rgba(124,58,255,.75)"></rect>
+          <rect x="205" y="110" width="28" height="60" rx="3" fill="rgba(124,58,255,.2)"></rect>
+          <rect x="238" y="40" width="28" height="130" rx="3" fill="rgba(124,58,255,.75)"></rect>
+          <rect x="185" y="15" width="80" height="30" rx="6" fill="rgba(124,58,255,.12)" stroke="rgba(124,58,255,.4)" stroke-width="1.5"></rect>
+          <text x="225" y="26" text-anchor="middle" fill="#7c3aff" font-size="7" font-family="monospace">ACCURACY</text>
+          <text x="225" y="39" text-anchor="middle" fill="#5b21b6" font-size="14" font-family="monospace" font-weight="700">94%</text>
+        </svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-num" style="color:var(--violet)">02 · ML · EDA</div>
+        <div class="proj-title">Customer Churn Prediction</div>
+        <p class="proj-desc">Deep EDA to uncover churn drivers. Full preprocessing pipeline with encoding, missing value handling, and cross-validation for production-grade prediction.</p>
+        <div class="proj-result" style="background:#ede9ff;color:#5b21b6">🎯 94% accuracy · Top 5 churn indicators identified</div>
+        <div class="proj-techs"><span class="pt">Scikit-learn</span><span class="pt">Pandas</span><span class="pt">EDA</span><span class="pt">XGBoost</span></div>
+      </div>
+      <div class="proj-foot"><span>Classification</span><a href="https://github.com/shamssmagdyy/churn-prediction" class="pl" style="color:var(--violet)">GitHub ↗</a></div>
+    </div>
+
+    <!-- P3 Weather DNN -->
+    <div class="proj-card rev in">
+      <div class="proj-vis" style="background:linear-gradient(135deg,#e0f7f0,#b2f0e0)">
+        <svg viewBox="0 0 280 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="45" cy="50" r="9" fill="none" stroke="rgba(0,180,120,.5)" stroke-width="1.5"></circle>
+          <circle cx="45" cy="90" r="9" fill="none" stroke="rgba(0,180,120,.5)" stroke-width="1.5"></circle>
+          <circle cx="45" cy="130" r="9" fill="none" stroke="rgba(0,180,120,.5)" stroke-width="1.5"></circle>
+          <circle cx="45" cy="170" r="9" fill="none" stroke="rgba(0,180,120,.5)" stroke-width="1.5"></circle>
+          <circle cx="120" cy="40" r="9" fill="rgba(0,200,150,.2)" stroke="rgba(0,200,150,.7)" stroke-width="1.5"></circle>
+          <circle cx="120" cy="80" r="9" fill="rgba(0,200,150,.2)" stroke="rgba(0,200,150,.7)" stroke-width="1.5"></circle>
+          <circle cx="120" cy="120" r="9" fill="rgba(0,200,150,.2)" stroke="rgba(0,200,150,.7)" stroke-width="1.5"></circle>
+          <circle cx="120" cy="160" r="9" fill="rgba(0,200,150,.2)" stroke="rgba(0,200,150,.7)" stroke-width="1.5"></circle>
+          <circle cx="195" cy="65" r="9" fill="rgba(0,200,150,.5)" stroke="rgba(0,200,150,.9)" stroke-width="1.5"></circle>
+          <circle cx="195" cy="110" r="9" fill="rgba(0,200,150,.5)" stroke="rgba(0,200,150,.9)" stroke-width="1.5"></circle>
+          <circle cx="255" cy="100" r="13" fill="rgba(0,200,150,.8)" stroke="#00c896" stroke-width="2"></circle>
+          <text x="255" y="105" text-anchor="middle" fill="#fff" font-size="8" font-family="monospace" font-weight="700">99%</text>
+          <line x1="54" y1="50" x2="111" y2="42" stroke="rgba(0,200,150,.25)" stroke-width=".8"></line>
+          <line x1="54" y1="90" x2="111" y2="80" stroke="rgba(0,200,150,.25)" stroke-width=".8"></line>
+          <line x1="54" y1="130" x2="111" y2="120" stroke="rgba(0,200,150,.25)" stroke-width=".8"></line>
+          <line x1="129" y1="80" x2="186" y2="68" stroke="rgba(0,200,150,.35)" stroke-width="1"></line>
+          <line x1="129" y1="110" x2="186" y2="112" stroke="rgba(0,200,150,.35)" stroke-width="1"></line>
+          <line x1="204" y1="100" x2="242" y2="100" stroke="#00c896" stroke-width="2"></line>
+        </svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-num" style="color:var(--mint)">03 · DNN</div>
+        <div class="proj-title">Weather Delay Classification</div>
+        <p class="proj-desc">Deep neural network with Keras for flight delay classification. Dropout regularization and early stopping to eliminate overfitting.</p>
+        <div class="proj-result" style="background:#e0f7f0;color:#065f46">🎯 99% accuracy · Overfitting fully eliminated</div>
+        <div class="proj-techs"><span class="pt">Keras</span><span class="pt">DNN</span><span class="pt">Dropout</span><span class="pt">TF</span></div>
+      </div>
+      <div class="proj-foot"><span>DNN · Aviation</span><a href="https://www.kaggle.com/code/shamsmagdy12/dnn-t" class="pl" style="color:var(--mint)">Kaggle ↗</a></div>
+    </div>
+
+    <!-- P4 Career App -->
+    <div class="proj-card rev in">
+      <div class="proj-vis" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0)">
+        <svg viewBox="0 0 280 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <rect x="100" y="10" width="80" height="175" rx="10" fill="rgba(255,255,255,.6)" stroke="rgba(244,63,142,.3)" stroke-width="1.5"></rect>
+          <rect x="108" y="20" width="64" height="155" rx="6" fill="rgba(255,255,255,.5)"></rect>
+          <rect x="112" y="25" width="56" height="10" rx="3" fill="rgba(244,63,142,.3)"></rect>
+          <text x="140" y="33" text-anchor="middle" fill="#be185d" font-size="5.5" font-family="monospace" font-weight="700">CareerGuide App</text>
+          <rect x="112" y="42" width="38" height="12" rx="3" fill="rgba(244,63,142,.15)" stroke="rgba(244,63,142,.3)" stroke-width=".8"></rect>
+          <text x="131" y="50" text-anchor="middle" fill="#be185d" font-size="4.5" font-family="monospace">What's my path?</text>
+          <rect x="122" y="60" width="46" height="12" rx="3" fill="rgba(0,0,0,.06)"></rect>
+          <text x="145" y="68" text-anchor="middle" fill="#555" font-size="4.5" font-family="monospace">Try ML Engineering</text>
+          <rect x="108" y="160" width="64" height="10" rx="3" fill="rgba(244,63,142,.08)"></rect>
+          <text x="124" y="167" text-anchor="middle" fill="rgba(190,24,93,.4)" font-size="8">⌂</text>
+          <text x="140" y="167" text-anchor="middle" fill="#be185d" font-size="8">✦</text>
+          <text x="156" y="167" text-anchor="middle" fill="rgba(190,24,93,.4)" font-size="8">⚙</text>
+          <text x="25" y="55" fill="rgba(244,63,142,.6)" font-size="9" font-family="monospace">Flutter</text>
+        </svg>
+      </div>
+      <div class="proj-body">
+        <div class="proj-num" style="color:var(--pink)">05 · Flutter</div>
+        <div class="proj-title">Career Guidance System</div>
+        <p class="proj-desc">Mobile application built with Flutter for intelligent career path guidance. Clean UI, smooth navigation, and well-structured Dart codebase.</p>
+        <div class="proj-result" style="background:#fce4ec;color:#9d174d">🎯 Full Flutter mobile app · Clean UI &amp; navigation</div>
+        <div class="proj-techs"><span class="pt">Flutter</span><span class="pt">Dart</span><span class="pt">Mobile</span></div>
+      </div>
+      <div class="proj-foot"><span>Mobile · Flutter</span><a href="https://github.com/Saifahmed3993/Career-Guidance-System" class="pl" style="color:var(--pink)">GitHub ↗</a></div>
+    </div>
+  </div>
+</div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══ CERTIFICATES ═══ -->
+<section id="certs" style="background:var(--bg2)">
+<div class="container">
+  <div class="rev in">
+    <div class="sec-label" style="color:var(--amber)"><span style="display:inline-block;width:18px;height:2px;background:var(--amber)"></span>Certificates</div>
+    <h2 class="sec-h">Verified<br><em style="color:var(--amber)">Expertise</em></h2>
+  </div>
+  <div class="cert-grid">
+
+    <div class="cert-c rev in">
+    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--violet)"></div>
+    <div class="cert-icon">🏅</div>
+    <div class="cert-src" style="color:var(--violet)">Kaggle</div>
+    <div class="cert-name">Intro to Machine Learning</div>
+    <div class="stp-photo-slot" onclick="triggerUpload(this)" style="border-style: solid; border-color: var(--sky);">
+        <img alt="Certificate Photo 1" src="images\introMLKag.png" style="display: block;"> <!--! (src="add yourphoto")-->
+        <div class="slot-icon" style="display: none;">📷</div>
+    </div>
+    </div>
+      
+    <div class="cert-c rev in">
+    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--sky)"></div>
+    <div class="cert-icon">🏅</div>
+    <div class="cert-src" style="color:var(--sky)">Kaggle</div>
+    <div class="cert-name">AI and Machine Learning</div>
+    <div class="stp-photo-slot" onclick="triggerUpload(this)" style="border-style: solid; border-color: var(--sky);">
+        <img alt="Certificate Photo 2" src="images\Intermediate Machine Learning.png" style="display: block;"> <!--! (src="add yourphoto")-->
+        <div class="slot-icon" style="display: none;">📷</div>
+    </div>
+    </div>
+    
+    <div class="cert-c rev in">
+    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--coral)"></div>
+    <div class="cert-icon">🎓</div>
+    <div class="cert-src" style="color:var(--coral)">Mahara Tech · ITI</div>
+    <div class="cert-name">Applied Deep Learning</div>
+    <div class="stp-photo-slot" onclick="triggerUpload(this)" style="border-style: solid; border-color: var(--sky);">
+        <img alt="Certificate Photo 3" src="images\DLmahara.png" style="display: block;"> <!--! (src="add yourphoto")-->
+        <div class="slot-icon" style="display: none;">📷</div>
+    </div>
+    </div>
+
+    <div class="cert-c rev in">
+    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--mint)"></div>
+    <div class="cert-icon">🎓</div>
+    <div class="cert-src" style="color:var(--mint)">Mahara Tech · ITI</div>
+    <div class="cert-name">Deep Learning for NLP</div>
+    <div class="stp-photo-slot" onclick="triggerUpload(this)" style="border-style: solid; border-color: var(--sky);">
+        <img alt="Certificate Photo 4" src="images\NLPmahara.png" style="display: block;"> <!--! (src="add yourphoto")-->
+        <div class="slot-icon" style="display: none;">📷</div>
+    </div>
+    </div>
+
+    <div class="cert-c rev in">
+    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--pink)"></div>
+    <div class="cert-icon">✨</div>
+    <div class="cert-src" style="color:var(--pink)">Sprints</div>
+    <div class="cert-name">SprintUp — AI &amp; ML Foundations</div>
+    <div class="stp-photo-slot" onclick="triggerUpload(this)" style="border-style: solid; border-color: var(--sky);">
+        <img alt="Certificate Photo 5" src="images\sprints.png" style="display: block;"> <!--! (src="add yourphoto")-->
+        <div class="slot-icon" style="display: none;">📷</div>
+    </div>
+    </div>
+
+    <div class="cert-c rev in">
+    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--amber)"></div>
+    <div class="cert-icon">📱</div>
+    <div class="cert-src" style="color:var(--amber)">SBS Student Activity</div>
+    <div class="cert-name">Flutter — Programming Delegate</div>
+    <div class="stp-photo-slot" onclick="triggerUpload(this)" style="border-style: solid; border-color: var(--sky);">
+        <img alt="Certificate Photo 6" src="images\sbsFlut.jpg" style="display: block;"> <!--! (src="add yourphoto")-->
+        <div class="slot-icon" style="display: none;">📷</div>
+    </div>
+    </div>
+
+    <div class="cert-c rev in">
+    <div style="position:absolute;top:0;left:0;right:0;height:3px;background:var(--violet)"></div>
+    <div class="cert-icon">🚀</div>
+    <div class="cert-src" style="color:var(--violet)">InnovEgypt · ITIDA · TIEC</div>
+    <div class="cert-name">Entrepreneurship Training (45 hrs)</div>
+    <div class="stp-photo-slot" onclick="triggerUpload(this)" style="border-style: solid; border-color: var(--sky);">
+        <img alt="Certificate Photo 7" src="images\innovegy.png" style="display: block;"> <!--! (src="add yourphoto")-->
+        <div class="slot-icon" style="display: none;">📷</div>
+    </div>
+    </div>
+
+  </div>
+</div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══ FREELANCE ═══ -->
+<section id="freelance" style="background:var(--bg3)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:3.5rem" class="rev in">
+      <div>
+        <div class="sec-label" style="color:var(--mint)">
+          <span style="display:inline-block;width:18px;height:2px;background:var(--mint)"></span>Freelancing
+        </div>
+        <h2 class="sec-h">Find me on<br><em style="color:var(--mint)">these platforms</em></h2>
+      </div>
+      <p class="sec-sub">Available for ML projects, data analysis, model development, and Flutter app development. Fast delivery, clean code, clear results.</p>
+    </div>
+
+    <div class="fl-grid">
+      <div class="fl-card rev in">
+        <a href="https://kafiil.com/u/shams_magdy" target="_blank" style="text-decoration:none;color:inherit;">
+          <div class="fl-logo" style="background:#e0f7f0;color:#00897b">K</div>
+          <div class="fl-name">Kafiil</div>
+          <div class="fl-type">Arabic Freelance Platform</div>
+          <div class="fl-badge" style="color:var(--mint);border-color:rgba(0,200,150,.3);background:rgba(0,200,150,.07)">● Active</div>
+        </a>
+      </div>
+
+      <div class="fl-card rev in">
+        <a href="https://mostaql.com/u/Shams_Magdy" target="_blank" style="text-decoration:none;color:inherit;">
+          <div class="fl-logo" style="background:#ede9ff;color:#7c3aff">M</div>
+          <div class="fl-name">Mostaql</div>
+          <div class="fl-type">Arabic Freelance Platform</div>
+          <div class="fl-badge" style="color:var(--violet);border-color:rgba(124,58,255,.3);background:rgba(124,58,255,.07)">● Active</div>
+        </a>
+      </div>
+
+      <div class="fl-card rev in">
+        <a href="https://khamsat.com/user/shams_magdy1" target="_blank" style="text-decoration:none;color:inherit;">
+          <div class="fl-logo" style="background:#fff8e1;color:#f59e0b">5</div>
+          <div class="fl-name">Khamsat</div>
+          <div class="fl-type">Arabic Micro-Service Platform</div>
+          <div class="fl-badge" style="color:var(--amber);border-color:rgba(255,176,32,.3);background:rgba(255,176,32,.07)">● Active</div>
+        </a>
+      </div>
+
+      <div class="fl-card rev in">
+        <a href="https://nafezly.com/u/shams_magdy" target="_blank" style="text-decoration:none;color:inherit;">
+          <div class="fl-logo" style="background:#fce4ec;color:#e91e8c">N</div>
+          <div class="fl-name">Nafezly</div>
+          <div class="fl-type">Arabic Freelance Platform</div>
+          <div class="fl-badge" style="color:var(--pink);border-color:rgba(244,63,142,.3);background:rgba(244,63,142,.07)">● Active</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" style="background:var(--bg2)">
+<div class="container">
+  <div class="rev in" style="text-align:center;max-width:580px;margin:0 auto 3.5rem">
+    <div class="sec-label" style="color:var(--sky);justify-content:center"><span style="display:inline-block;width:18px;height:2px;background:var(--sky)"></span>Contact<span style="display:inline-block;width:18px;height:2px;background:var(--sky)"></span></div>
+    <h2 class="sec-h">Let's build<br><em style="color:var(--sky)">something smart</em></h2>
+    <p style="font-size:.86rem;line-height:1.85;color:var(--muted);margin-top:.7rem">Open to ML roles, freelance projects, and collaborations.<br>Click any icon to reach me directly.</p>
+  </div>
+  <div class="rev in" style="display:flex;justify-content:center;gap:1.8rem;flex-wrap:wrap;margin-bottom:3.5rem">
+    <a href="mailto:shamsmagdy33388@gmail.com" class="contact-icon-btn" title="Email">
+      <div class="cib-inner" style="background:linear-gradient(135deg,#ff5c3a,#ff8a65)">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><polyline points="2,4 12,13 22,4"></polyline></svg>
+      </div>
+      <span class="cib-label">Email</span>
+    </a>
+    <a href="https://www.linkedin.com/in/shams-magdy/" target="_blank" class="contact-icon-btn" title="LinkedIn">
+      <div class="cib-inner" style="background:linear-gradient(135deg,#0077b5,#00a0dc)">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </div>
+      <span class="cib-label">LinkedIn</span>
+    </a>
+    <a href="https://github.com/shamssmagdyy" target="_blank" class="contact-icon-btn" title="GitHub">
+      <div class="cib-inner" style="background:linear-gradient(135deg,#24292e,#555)">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </div>
+      <span class="cib-label">GitHub</span>
+    </a>
+    <a href="https://www.kaggle.com/shamsmagdy12" target="_blank" class="contact-icon-btn" title="Kaggle">
+      <div class="cib-inner" style="background:linear-gradient(135deg,#20beff,#0ea5e9)">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.334z"></path></svg>
+      </div>
+      <span class="cib-label">Kaggle</span>
+    </a>
+    <a href="https://wa.me/201124762462" class="contact-icon-btn" title="WhatsApp">
+      <div class="cib-inner" style="background:linear-gradient(135deg,#25d366,#128c7e)">
+        <i class="fa-brands fa-whatsapp" style="font-size:30px; color:#fff; width:30px; height:30px; display:flex; align-items:center; justify-content:center;"></i>
+      </div>
+      <span class="cib-label">WhatsApp</span>
+    </a>
+    <a href="https://codeforces.com/profile/shams_nb" target="_blank" class="contact-icon-btn" title="Codeforces">
+      <div class="cib-inner" style="background:linear-gradient(135deg,#f43f8e,#e879a0)">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><rect x="3" y="10" width="4" height="11" rx="1"></rect><rect x="10" y="6" width="4" height="15" rx="1"></rect><rect x="17" y="3" width="4" height="18" rx="1"></rect></svg>
+      </div>
+      <span class="cib-label">Codeforces</span>
+    </a>
+  </div>
+  <form action="https://formspree.io/f/xreyoand" method="POST" class="c-form rev in" style="max-width:580px;margin:0 auto">
+  <h3>Send a Message</h3>
+  <p>I'll get back within 24 hours.</p>
+  <div class="frow">
+    <div class="ff">
+      <label>Name</label>
+      <input type="text" name="name" placeholder="Your name" required>
+    </div>
+    <div class="ff">
+      <label>Email</label>
+      <input type="email" name="email" placeholder="your@email.com" required>
+    </div>
+  </div>
+  <div class="ff" style="margin-bottom:.9rem">
+    <label>Subject</label>
+    <input type="text" name="subject" placeholder="Project type or topic" required>
+  </div>
+  <div class="ff" style="margin-bottom:1.4rem">
+    <label>Message</label>
+    <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+  </div>
+  <button type="submit" class="send-btn" style="background: var(--violet);">Send Message →</button>
+</form>
+</div>
+</section>
+
+<footer>
+  <div class="f-copy">© 2025 <span>Shams Magdy</span> · Machine Learning Engineer · Cairo, Egypt</div>
+  <a href="#hero" class="f-top">↑ Back to top</a>
+</footer>
+
+<script src="main.js"></script>
+
+
+</body></html>
